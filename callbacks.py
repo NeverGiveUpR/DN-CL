@@ -61,7 +61,7 @@ def get_callbacks(
         )
         callbacks.append(input_regularizer_callback)
 
-    wandb.init(mode="disabled")
+    wandb.init(mode="offline")
     wandb.init(project="DSRagainstNoise", entity="liujingyi", config=wandb_config)
     wandb_callback = ExtendedWandbCallback(save_model=False)
 
